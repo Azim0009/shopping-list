@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 15px;
+    background: #f2f4f8;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.column {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    flex: 1 1 23%;
+    min-width: 260px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 8px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin-bottom: 12px;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+span {
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+/* Когда отмечено */
+input[type="checkbox"]:checked + span {
+    color: red;
+    text-decoration: line-through;
+}
+
+input[type="checkbox"] {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+/* 📱 MOBILE РЕЖИМ */
+@media (max-width: 768px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .column {
+        width: 100%;
+        min-width: 100%;
+        padding: 18px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    span {
+        font-size: 16px;   /* крупный текст */
+    }
+
+    input[type="checkbox"] {
+        transform: scale(1.4);  /* большие чекбоксы */
+    }
+}
